@@ -20,8 +20,7 @@ function playGame(playerInput){
    printMessage('Mój ruch to: ' + computerMove);
    console.log('Gracz wpisał: ' + playerInput);
 
-   let playerMove = getMoveName(playerInput);
-
+   const playerMove = getMoveName(playerInput);
    printMessage('Twój ruch to: ' + playerMove);
 
 function displayResult(argComputerMove, argPlayerMove) {
@@ -51,20 +50,16 @@ function displayResult(argComputerMove, argPlayerMove) {
       printMessage("nieznany ruch");
    }
 }
-
    displayResult(computerMove, playerMove);
    console.log(counterComp + ":" + counterPlayer);
    printMessage(counterComp + ":" + counterPlayer);
 }
-
 document.getElementById('play-rock').addEventListener('click', function(){
    playGame(1);
 });
-
 document.getElementById('play-paper').addEventListener('click', function(){
    playGame(2);
 });
-
 document.getElementById('play-scissors').addEventListener('click', function(){
    playGame(3);
 });
